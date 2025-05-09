@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        @keyframes slidePause {
+    0%, 20% {
+      transform: translateX(0%);
+    }
+    30%, 50% {
+      transform: translateX(-50%);
+    }
+    60%, 100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .slide-banner {
+    animation: slidePause 12s infinite ease-in-out;
+  }
+      </style>
 </head>
 <body>
-    
+    <!-- pop up -->
+    <a href="#home" class="w-20 h-20 rounded-full bg-white shadow-xl flex justify-center items-center  bottom-10 right-10 fixed font-semibold text-4xl"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- end pop up -->
+    <div class="">
+        <nav class="flex justify-between w-full h-12 px-10 items-center">
+            <div class="w-44 text-2xl font-semibold text-blue-900">LP3I Kantin Tsk</div>
+            <div class="flex gap-12">
+                <!-- <div class="w-96 flex items-center rounded-md bg-white border border-gray-300 focus-within:ring-2 focus-within:ring-blue-500 shadow-sm px-4 py-1 transition">
+                    <i class="bi bi-search text-gray-500 text-lg"></i>
+                    <input type="text" placeholder="Mau makan apa hari ini ..." class="ml-3 w-full bg-transparent focus:outline-none placeholder-gray-400">
+                </div> -->
+                <div class="flex gap-8">
+                    <!-- <a href="" class="text-3xl">
+                        <i class="bi bi-basket"></i>
+                    </a> -->
+                    <a href="" class="text-3xl">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <section id="home" class="flex justify-center w-full h-[75vh] overflow-hidden">
+            <div class="w-6xl pt-6 relative">
+              <!-- Banner autoplay -->
+              <div class="relative w-full h-96 overflow-hidden rounded-xl">
+                <div class="absolute top-0 left-0 w-[200%] h-full flex slide-banner">
+                  <div class="w-1/2 h-full bg-[url('/img/BannerWeb1.png')] bg-cover bg-center"></div>
+                  <div class="w-1/2 h-full bg-[url('/img/BannerWeb2.png')] bg-cover bg-center"></div>
+                </div>
+              </div>
+
+
+                <div class="w-full mt-4 flex gap-5">
+                    <a href="" class="flex gap-3 items-center px-3 w-full h-40 rounded-lg shadow-xl">
+                        <div class="w-32 h-32 rounded-md bg-gray-400"></div>
+                        <div class="">
+                            <div class="w-96 text-lg font-semibold">Kantin Abah & Bi Euis</div>
+                            <div class="w-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. At culpa repellat perferendis saepe?</div>
+                        </div>
+                    </a>
+                    <a href="" class="flex gap-3 items-center px-3 w-full h-40 rounded-lg shadow-xl ">
+                        <div class="w-32 h-32 rounded-md bg-gray-400"></div>
+                        <div class="">
+                            <div class="w-96 text-lg font-semibold">Kantin Ibi</div>
+                            <div class="w-96">Lorem ipsum dolor sit amet consectetur adipisicing elit. At culpa repellat perferendis saepe?</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full py-3 mt-10 text-center border-b border-b-gray-300">
+                    <a href="" class="w-full">Lihat lebih banyak ...</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="w-full h-[110vh] px-12 flex justify-center">
+            <div class="w-6xl">
+                <div class="text-center underline text-lg font-semibold">Menu Menarik</div>
+                <div class="w-full">
+                    <div class="w-96 h-60 bg-teal-400 rounded-lg relative">
+                        <div class="w-52 h-44 bg-gray-400 absolute right-[-120px] top-[30px] rounded-lg">descripsi makanan</div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-end">
+                    <div class="w-96 h-60 bg-teal-400 rounded-lg relative">
+                        <div class="w-52 h-44 bg-gray-400 absolute left-[-120px] top-[30px] rounded-lg">descripsi makanan</div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-start">
+                    <div class="w-96 h-60 bg-teal-400 rounded-lg relative">
+                        <div class="w-52 h-44 bg-gray-400 absolute right-[-120px] top-[30px] rounded-lg">descripsi makanan</div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-end">
+                    <div class="w-96 h-60 bg-teal-400 rounded-lg relative">
+                        <div class="w-52 h-44 bg-gray-400 absolute left-[-120px] top-[30px] rounded-lg">descripsi makanan</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex justify-center w-full h-[100vh]">
+            <div class="w-6xl">
+                <div class="w-full text-center">
+                    <div class="text-center underline text-lg font-semibold">Judul</div>
+                </div>
+                <div class="mt-10 w-full flex-col items-center">
+                    <img src="" alt="Ini gambar Kantin Lp3i Tasikmalaya">
+                    <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam officia ducimus enim recusandae id! Velit cupiditate alias, 
+                        accusantium rem consequuntur ratione recusandae sint deserunt nihil repudiandae pariatur obcaecati porro quae quaerat! Autem natus voluptatibus 
+                        rem doloremque quibusdam ex eius distinctio nisi dolorum nesciunt, illum labore magni dolor saepe similique unde.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="w-full flex justify-center items-center h-[10vh]">
+            <div class="w-6xl">
+                <div class="text-2xl">
+                    &copy;<span class="font-bold"> feer</span> Kelompok 2 Web Fundamental 2025
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
