@@ -1,16 +1,24 @@
 const container = document.getElementById('container');
-const registerbtn = document.getElementById('register');
-const loginbtn = document.getElementById('login');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+const signUpDiv = document.getElementById("sign-up");
+const signInDiv = document.getElementById("sign-in");
 
-registerbtn.addEventListener('click', () => {
+
+registerBtn.addEventListener('click', () => {
     container.classList.add("active");
 });
 
-loginbtn.addEventListener('click', () => {
+loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-// document.getElementById('daftar').addEventListener('click', function() {
-// document.getElementById('sign-up').style.display = 'none';
-// document.getElementById('sign-in').style.display = 'block';
-// });
+registerBtn.addEventListener("click", () => {
+    signUpDiv.style.display = "block"; 
+    signInDiv.style.display = "none"; 
+    });
+
+loginBtn.addEventListener("click", () => {
+    signUpDiv.style.display = "none"; 
+    signInDiv.style.display = "block"; 
+});     

@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
-    background-color: lightgray;
+    background-color: rgb(224, 229, 255);
+    background: linear-gradient(to right, #e2e2e2, #7595ff);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,14 +18,17 @@ body {
 }
 
 .container {
-    background-color: white;
-    /* border-radius: 90px; */
+    background-image: url(img/image\(1\).png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.35);
     position: relative;
     overflow: hidden;
-    width: 100%;
+    width: 768px;
     max-width: 100%;
-    min-height: 100%;
+    min-height: 480px;
 }
 
 .container p {
@@ -33,12 +39,13 @@ body {
 }
 
 .container span {
-    font-size: 12px;
-    margin: 20px;
+    font-size: 13px;
+    font: bolder;
+    /* margin: 20px; */
 }
 
 .container a {
-    color: #333;
+    color: #fff;
     font-size: 13px;
     text-decoration: none;
     margin: 15px 0 10px;
@@ -47,6 +54,7 @@ body {
 .container button {
     background-color: rgb(0, 0, 180);
     color: white;
+    font-size: 12px;
     padding: 10px 45px;
     border: 1px solid transparent;
     border-radius: 8px;
@@ -64,14 +72,14 @@ body {
 }
 
 .container button.hidden {
-    background-color: transparent;
-    border-color: #fff;
+    background-color: rgb(0, 0, 180);
+    border-color: rgb(0, 0, 180);
 }
 
 .container button.hidden:hover {
-    background-color: #fff;
-    border-color: #fff;
-    color: black;
+    background-color: rgb(1, 1, 83);
+    border-color: rgb(1, 1, 83);
+    transform: scale(1.1);
 }
 
 .btntxt:hover {
@@ -79,7 +87,7 @@ body {
 }
 
 .container form {
-    background-color: #fff;
+    background-color: #ffffff00;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,11 +107,18 @@ body {
     outline: none;
 }
 
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+
 .sign-up, .sign-in {
     position: absolute;
     top: 0;
     height: 100%;
-    transition: all 0.6s ease-in-out;
+    /* transition: all 1s ease-in-out; */
     padding: 50px;
     font-size: large;
 }
@@ -112,10 +127,11 @@ body {
     left: 0;
     width: 50%;
     z-index: 2;
+    color: #fff;
 }
 
 .container.active .sign-in {
-    transform: translateX(100%);
+    transform: translateX();
 }
 
 .sign-up {
@@ -123,14 +139,13 @@ body {
     width: 50%;
     z-index: 1;
     opacity: 0;
-
+    color: #fff;
 }
 
 .container.active .sign-up {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
-    animation: move 0.6s;
 }
 
 @keyframes move {
@@ -151,7 +166,9 @@ body {
 }
 
 .icons a {
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 0, 180);
+    background-color: rgb(0, 0, 180);
+    color: #fff;
     border-radius: 20%;
     display: inline-flex;
     justify-content: center;
@@ -159,13 +176,15 @@ body {
     margin: 0 3px;
     width: 40px;
     height: 40px;
+    transition: transform 0.1s ease-in;
 }
 
 .icons a:hover {
     transform: scale(1.1);
-    background-color: #727272;
+    background-color: rgb(0, 0, 180);
     color: #fff;
-    border: #727272;
+    border: rgb(0, 0, 180);
+    background-color: rgb(1, 1, 83);
 }
 
 .toogle-container {
@@ -175,28 +194,29 @@ body {
     width: 50%;
     height: 100%;
     overflow: hidden;
-    /* border-radius: 90px; */
+    position: relative;
+    border-radius: 150px 0 0 100px;
     z-index: 1000;
     transition: all 0.6s ease-in-out;
 }
 
 .container.active .toogle-container {
     transform: translateX(-100%);
-    /* border-radius: 90px; */
+    border-radius: 0 150px 100px 0;
 }
 
 .toogle {
-    /* background-color: #2620C5ff; */
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/img/lp3i.jpg);
+    background-color: rgba(0, 0, 0, 0.986);
     height: 100%;
-    /* background: linear-gradient(to bottom, #2620C5ff,rgb(1, 1, 83)); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.822),rgba(0, 0, 0, 0.664));
     color: #fff;
     position: relative;
     left: -100%;
     width: 200%;
     transform: translateX(0);
-    transition: all 0.6 ease-in-out;
+    transition: all 1 ease-in-out;
     font-size: large;
+    text-shadow: #333;
 }
 
     .container.active .toogle {
@@ -215,7 +235,7 @@ body {
     text-align: center;
     top: 0;
     transform: translateX(0);
-    transition: all 0.6s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .toogle-left{
@@ -232,4 +252,29 @@ body {
 
 .container.active .toogle-right{
     transform: translateX(200%);
+}
+
+@media screen and (max-width: 650px) {
+    .sign-up, .sign-in {
+        width: 100%;
+        height: 50%;
+        padding: 20px;
+        transform: translateY(0); /* reset transform */
+        transition: all 0.6s ease-in-out;
+      }
+    
+      .container.active .sign-up {
+        transform: translateY(-100%);
+        z-index: 5;
+        opacity: 1;
+        bottom: 0;
+      }
+    
+      .container.active .sign-in {
+        transform: translateY(100%);
+        z-index: 1;
+        opacity: 0;
+      }
+      
+    
 }
