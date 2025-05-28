@@ -9,12 +9,13 @@
 
 body {
     background-color: rgb(224, 229, 255);
-    background: linear-gradient(to right, #e2e2e2, #7595ff);
+    background: rgb(237, 237, 255);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    margin: 20px;
 }
 
 .container {
